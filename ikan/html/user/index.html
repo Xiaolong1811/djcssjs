@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>会员中心 - {$maccms.site_name}</title>
+	<meta name="keywords" content="会员中心">
+	<meta name="description" content="会员中心">
+	{include file="block/include"}
+	{include file="user/include" /}
+</head>
+<body id="uindex">
+<div class="hot_banner">
+    {include file="block/head"}
+</div>
+
+
+<!-- 会员中心 -->
+<div>
+  <div id="member" class="fn-clear">
+	<div id="left" class="dl-bl">
+	{include file="user/left_nav" /}
+	</div>
+</div>  
+    
+</div>
+
+
+<div id="member" class="fn-clear">
+	<div id="right" class="dr-no">
+		<div class="m-nav">
+			<a href="javascript:MAC.GoBack()" class="btn-left"><i class="iconfont ico-right">&#xe635;</i></a>
+			<a href="{:url('user/info')}" class="btn-right">修改</a>
+			<span class="mb-title">基本资料</span>
+	    </div>
+	    <div class="co-right co-right-bg">
+		<h2>我的资料</h2>
+		<div id="tab">
+			<div id="listCon">
+				<!-- 基本资料 -->
+				<div class="cur">
+					<p><span class="xiang">用户名</span>{$obj.user_name}</p>
+					<p><span class="xiang">所属会员组</span>{if condition="$obj.group_id lt 3"}{$user.group.group_name}{else}<i class="iconfont user_vip">&#xe62d;</i>{$obj.group.group_name}{/if}</p>
+					<p><span class="xiang">账户积分</span>{$obj.user_points}</p>
+					<p><span class="xiang">会员期限</span>{if condition="$obj.group_id lt 3"}永久有效{else}{$obj.user_end_time|mac_day}{/if}</p>
+					<p><span class="xiang">注册时间</span>{$obj.user_reg_time|mac_day}</p>
+					<p><span class="xiang">上次登录</span>{$obj.user_last_login_time|mac_day=color}</p>
+					<p><span class="xiang">登陆时间</span>{$obj.user_login_time|mac_day}</p>
+					<p><span class="xiang">登录次数</span>{$obj.user_login_num}</p>
+
+				</div>
+			</div>
+		</div>
+	 </div>
+	 </div>
+</div>
+
+ {include file="block/foot"}
+</body>
+</html>

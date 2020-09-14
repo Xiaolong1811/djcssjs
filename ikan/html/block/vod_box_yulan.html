@@ -1,0 +1,14 @@
+<li class="vodlist_item_yulan">
+	<a>
+    <span class="vodlist_thumb_yulan_box">
+        <video id="video" autoplay loop muted playsinline poster="{$GLOBALS['config']['extra']['images']}{:mac_url_img($vo.vod_pic)}" src="{$GLOBALS['config']['extra']['preview']}{$vo.vod_pic_thumb}preview.mp4"></video>
+    </span>
+    	{if condition="$vo.vod_level eq 8"}
+		<span class="vodlist_free">限时免费</span>
+        {/if}
+	</a>
+	<div class="vodlist_titbox">									
+		<p class="vodlist_title"><a href="{:mac_url_vod_play($vo)}" title="{$vo.vod_name}">{$vo.vod_name}</a></p>
+	</div>
+	{include file="block/vod_box_time"}
+</li>

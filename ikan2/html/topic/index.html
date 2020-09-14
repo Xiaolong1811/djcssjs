@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/topic_type"}   
+	{include file="block/include"}
+</head>
+<body>
+<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+    <div class="container">
+
+      <div class="vod_row topic_row">
+       <div class="pannel clearfix">
+            <!-- 列表 -->
+            <div class="pannel_head clearfix">
+                <h2 class="title"><i class="fa fa-fire"></i> 影视专题</h2>								
+			</div>			
+			<ul class="topiclist clearfix">
+				{maccms:topic num="15" paging="yes" half="3" order="desc" by="time"}
+				{include file="block/topic_box"}
+				{/maccms:topic}	 
+			</ul>
+			<!-- end 列表 -->
+         {include file="block/page"}<!-- 翻页-->
+       </div>
+      </div>
+      
+      
+      
+    </div>   
+{include file="block/foot"}
+</body>
+</html>

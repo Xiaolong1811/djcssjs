@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/vod_search"}   
+	{include file="block/include"}
+	<script type="text/javascript" src="{$maccms.path_tpl}js/tabbar.js"></script>
+</head>
+<body>     	
+		<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+    <div class="container">
+        <div class="left_row fl">        	
+        	<div class="pannel search_box clearfix">  
+				<div class="pannel_head clearfix">	
+					<h2 class="title">									
+					<i class="fa fa-search" aria-hidden="true"></i>	搜索到与“<em>{$param.wd}{$param.actor}{$param.director}{$param.area}{$param.lang}{$param.year}{$param.class}{$param.tag}</em>”相关的<em class="mac_total"></em>条结果
+					</h2>
+				</div>	
+                
+				<!-- 列表 -->	
+				<ul class="vodlist clearfix">
+			        {php}$count=1;{/php}
+			        {maccms:vod num="20" paging="yes" type="21,22,25,26,29,58,59" half="3" pageurl="vod/search" order="desc" by="time"}
+			        {if$count==1}
+						{if condition="$GLOBALS['config']['site']['vod_searchads'] eq 1"}
+							<li class="searchlist_item">
+								{include file="ads/search_list_ad"}		
+							</li>
+						{/if}
+                    {/if}
+                    {php}$count++;{/php}																
+					{include file="block/vod_box"}					
+					{/maccms:vod}
+				</ul>		
+				<!-- end 列表 -->	
+				
+				{include file="block/page"}<!-- 翻页-->
+				
+
+				{empty name="$__PAGING__.record_total"}
+	            <div class="search_tips"><p>很抱歉，暂无相关视频！</p><p>提示（如果搜索词错误也将无法搜到，可尝试简化搜索词）</p></div>
+	            {/empty}
+			</div>
+			{if condition="$GLOBALS['config']['site']['vod_page_wads'] eq 1"}
+            <div class="pannel ads_box clearfix">
+				<div id="1001" class="ads ads_w">
+					{include file="ads/vod_adw"}
+				</div>
+		    </div>
+			{/if}
+			{empty name="$__PAGING__.record_total"}
+			<div class="pannel clearfix">
+				<div class="pannel_head clearfix">
+				    <a class="text_muted pull_right" href="{:mac_url('map/index')}">更多<i class="iconfont more_i">&#xe623;</i></a>
+					<h3 class="title">
+						没有搜索到您的影片 看看最近更新吧
+					</h3>						
+				</div>
+				<ul class="vodlist clearfix">
+					{maccms:vod num="60" type="25,21" order="desc" by="time"}
+					{include file="block/vod_box"}		
+					{/maccms:vod}
+				</ul>
+			</div>
+            {/empty}	      
+        </div>
+     </div>
+    <script type="text/javascript">
+        $('.mac_total').html('{$__PAGING__.record_total}');
+    </script>
+	{include file="block/foot"}
+</body>
+</html>

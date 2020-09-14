@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/vod_play"}   
+	{include file="block/include"}
+</head>
+<body>
+	<div id="play_page">
+    <div class="hot_banner">
+    {include file="block/head2"}
+    </div>
+		<div class="play_boxbg">	
+			<div class="play_box play_video">
+
+			<!-- 播放器  -->
+				<div class="left_row fl">
+					<div class="player_video embed-responsive embed-responsive-16by9 clearfix">
+
+				        {if $obj.vod_level==8}
+  {$player_data}{$player_js}
+{else /}
+  {if $user.group_id==1}
+<video autoplay loop muted playsinline height="100%" width="100%" id="video01">
+	<source src="{$GLOBALS['config']['extra']['preview']}{$obj.vod_pic_thumb}preview.mp4">
+</video>
+  {elseif $user.group_id==2 /}
+<video autoplay loop muted playsinline height="100%" width="100%" id="video01">
+	<source src="{$GLOBALS['config']['extra']['preview']}{$obj.vod_pic_thumb}preview.mp4">
+</video>
+  {elseif $user.group_id==3 /}
+	{$player_data}{$player_js}
+  {/if}
+{/if}
+						
+					</div>
+				</div>
+
+				<!-- end 播放器  -->
+
+
+            </div>
+             <div class="play_box">
+            	<div class="left_row fl">
+					<div class="pannel play_pan clearfix">
+						<div class="player">
+							<div class="player_detail detail play_text">
+							   <div class="video_title fl">
+								  <h5 class="title margin_0">
+								      {$obj.vod_name}</h5>
+								    {if condition="$obj.vod_score gt 0"}
+									<span class="text_score">{$obj.vod_duration}</span>
+									{/if}
+							   </div>
+
+							</div>
+							<div class="cblock">
+							   <p class="data ms_p margin_0">
+									<span class="text_muted play_tag">类型</span>{$obj.vod_class|mac_url_create='class','vod','search'}
+							   </p>
+							</div>
+						</div>																					
+					</div>
+                </div>	
+             </div>
+             
+             					<div class="playbtn wx_but hidden_mb">
+{if $obj.vod_level==8}
+  <a href="/user/upgrade.html">正在播放限时免费影片</a>
+{else /}
+  {if $user.group_id==1}
+<a href="/user/upgrade.html">正在观看预览片 开通会员看完整版</a>
+  {elseif $user.group_id==2 /}
+<a href="/user/upgrade.html">正在观看预览片 开通会员看完整版</a>
+  {elseif $user.group_id==3 /}
+<a href="/user/upgrade.html">欢迎您尊贵的VIP会员</a>
+  {/if}
+{/if}
+					</div>
+             
+          </div>
+     <div class="container">
+        <div class="left_row fl"> 
+	
+	
+				 <!-- 推荐阅读 -->
+			<div class="pannel clearfix">
+                <ul class="art_relates clearfix">
+                    {maccms:art num="1" ids="'.$obj['vod_rel_art'].'" level="9" order="desc" by="hits_week"}
+						{include file="block/art_box_right"}
+                    {/maccms:art}
+				</ul>
+			</div>
+			<!-- end 推荐阅读 -->
+	
+	
+				  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/{$obj.type_id}-----------/" >更多视频 <i class="fa fa-align-left" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-youtube-play" aria-hidden="true"></i> 热门推荐</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="'.$obj['type_id'].'"  order="desc" by="rnd" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/{$obj.type_id}-----------/">查看更多</a>
+				</div>
+			</div>
+			
+
+
+
+            {if condition="$GLOBALS['config']['comment']['status'] eq 1"}
+            <!-- 评论 -->
+			<div class="pannel clearfix" id="pinglun" >
+				<div class="pannel_head clearfix">
+				    <span class="pull_right">共&nbsp;<font color="#ff5f00"><em class="mac_total"></em></font>&nbsp;条评论</span>
+					<h3 class="title">评论</h3>
+				</div>
+				<div class="mac_comment comm_list comm_list_box" data-id="{$obj.vod_id}" data-mid="{$maccms.mid}" ></div>
+				<script>
+					$(function(){
+						MAC.Comment.Login = {$comment.login};
+						MAC.Comment.Verify = {$comment.verify};
+						MAC.Comment.Init();
+						MAC.Comment.Show(1);
+					});
+				</script>
+			</div>
+            <!-- end 评论 -->
+            {/if}
+        </div>
+        <div class="right_row pa_left fr hidden_xs hidden_mi">
+           
+        </div>
+    </div>
+	<script type="text/javascript">
+		function autoScroll(obj){
+			$(obj).find("ul").animate({
+				marginTop : "-0.8rem"
+			},500,function(){
+				$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);
+			})
+		}
+		$(function(){
+			setInterval('autoScroll(".fodong_tips")',3000);
+		})
+	</script>
+    <script type="text/javascript">$(".MacPlayer").addClass("embed-responsive").css("padding-bottom","56.25%");</script>
+    <span class="mac_hits hits hide" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-type="hits"></span>
+    <span style="display:none" class="mac_ulog_set" alt="设置视频播放记录" data-type="4" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+	{include file="block/foot"}
+	</div>
+</body>
+</html>

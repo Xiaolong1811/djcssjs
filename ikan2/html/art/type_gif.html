@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{include file="seo/art_type"}
+		{include file="block/include"}
+		<style type="text/css">
+			.waterfall {
+				-moz-column-count: 5;
+				-webkit-column-count: 5;
+				column-count: 5;
+				-moz-column-width: 16em;
+				-webkit-column-width: 16em;
+				column-width: 16em;
+				-moz-column-gap: 1em;
+				-webkit-column-gap: 1em;
+				column-gap: 1em;
+			}
+
+			.pin {
+				-moz-page-break-inside: avoid;
+				-webkit-column-break-inside: avoid;
+				break-inside: avoid;
+				background: white;
+			}
+
+			.pin img {
+				width: 100%;
+				padding-bottom: 1em;
+				margin-bottom: 0.5em;
+			}
+		</style>
+	</head>
+	<body>
+		{include file="block/head"}
+		<!-- 分类导航 -->
+		<div class="pannel clearfix">
+			<div class="type_list_menu">
+				<ul class="clearfix">
+					<li><i class="iconfont pianku_i">&#xe647;</i>&nbsp;美图分类</a></li>
+					<li><a href="/index.php/art/type/id/31.html">激情动图</a></li>
+					<li><a href="/index.php/art/type/id/43.html">国产自拍</a></li>
+					<li><a href="/index.php/art/type/id/42.html">诱惑美模</a></li>
+					<li><a href="/index.php/art/type/id/44.html">二次元风</a></li>
+					<li><a href="/index.php/art/type/id/45.html">欧美风情</a></li>
+					<li><a href="/index.php/art/type/id/46.html">日本套图</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- end 分类导航 -->
+		<div class="container">
+			<div class="waterfall">
+				{maccms:art num="60" paging="yes" half="3" type="current" order="desc" by="sort"}
+				<div class="pin lazyload">
+					<a href="{:mac_url_art_detail($vo)}">
+						<img src="{$vo.art_pic_thumb|mac_url_img}" />
+					</a>
+				</div>
+				{/maccms:art}
+				{empty name="$__PAGING__.record_total"}
+				<div class="show_no">抱歉！暂无数据</div>
+				{/empty}
+			</div>
+			<div class="pannel">
+				{include file="block/page"}
+				<!-- 翻页-->
+			</div>
+		</div>
+		{include file="block/foot"}
+	</body>
+</html>

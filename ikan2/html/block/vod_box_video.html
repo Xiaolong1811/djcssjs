@@ -1,0 +1,11 @@
+<li class="vodlist_item">
+	<a class="vodlist_thumb lazyload" href="{:mac_url_vod_play($vo)}" title="{$vo.vod_name}" data-original="{$GLOBALS['config']['extra']['images']}{:mac_url_img($vo.vod_pic)}">									
+				{if condition="$vo.vod_level eq 8"}
+		<span class="vodlist_free">限时免费</span>
+        {/if}
+		<span class="pic_text text_right">{$vo.vod_duration}</span>
+	</a>
+	<div class="vodlist_titbox">									
+		<p class="vodlist_title"><a href="{:mac_url_vod_play($vo)}" title="{$vo.vod_name}">{$vo.vod_name}</a></p>
+	</div>
+</li>

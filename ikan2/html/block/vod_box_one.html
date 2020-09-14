@@ -1,0 +1,18 @@
+<li class="vodlist_item_one">
+	<a class="vodlist_thumb_one lazyload" href="{:mac_url_vod_play($vo)}" title="{$vo.vod_name}" data-original="{$GLOBALS['config']['extra']['images']}{:mac_url_img($vo.vod_pic)}">						
+		<span class="play hidden_xs"></span>
+		{if condition="$vo.vod_level eq 8"}
+		<span class="vodlist_free">限免</span>
+        {/if}
+		{if condition="$vo.vod_lang eq 中文字幕"}
+		<span class="vodlist_lang">字幕</span>
+        {/if}
+        		{if condition="$vo.vod_state eq 高清"}
+		<span class="vodlist_top">HD</span>
+        {/if}
+	</a>
+	<div class="vodlist_titbox">									
+		<p class="vodlist_title"><a href="{:mac_url_vod_play($vo)}" title="{$vo.vod_name}">{$vo.vod_name}</a></p>
+	</div>
+	
+</li>

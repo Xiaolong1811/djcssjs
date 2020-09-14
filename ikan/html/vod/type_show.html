@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/vod_type"}   
+	{include file="block/include"}
+	<script type="text/javascript" src="{$maccms.path_tpl}js/loading.js"></script>
+	<script src="{$maccms.path_tpl}js/jquery.adaptive.js"></script>
+</head>
+<body>
+<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+  <div class="container">
+	  
+	  
+	  	   	<div class="vod_row">
+				<div class="pannel">
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+					    {maccms:vod num="1" paging="no" type="58" order="desc" level="8" by="rnd" }
+						{include file="block/vod_box_yulan"}
+						{/maccms:vod}
+						{maccms:vod num="8" paging="no" type="58" order="desc" level="8" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			  		           <!-- 分类导航 -->
+
+	   <div class="pannel clearfix">
+					<div class="pannel_head clearfix">
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i>  热门综艺频道</h2>
+					</div>
+	  	  <div class="type_list_menu">
+	      		<ul class="clearfix">
+	  					<li><h4><a href="/show/show---藍博學院--------/">蓝博学院</a></h4></li>
+						<li><h4><a href="/show/show---國光幫幫忙--------/">国光帮帮忙</a></h4></li>
+						<li><h4><a href="/show/show---中指通--------/">中指通</a></h4></li>
+						<li><h4><a href="/show/show---奇啪行小鹏--------/">小鹏奇葩行</a></h4></li> 
+						<li><h4><a href="/show/show---小哥哥艾理--------/">小哥哥艾理</a></h4></li>
+						<li><h4><a href="/show/show---麝香葡萄之夜--------/">麝香葡萄之夜</a></h4></li>
+	      		</ul>
+	       </div>
+	   </div>
+
+	  <!-- end 分类导航 -->
+			
+
+	  	   			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+					    <a class="text_muted pull_right" href="/show/show-----------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i>  最近更新成人综艺</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+	  
+
+			
+									  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---奇啪行小鹏--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 小鹏奇葩行 买春第一名</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="奇啪行小鹏" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---小哥哥艾理--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 小哥哥艾理</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="小哥哥艾理" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+
+				<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---Yahoo_TV_一起看--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 深夜保健室</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="Yahoo_TV_一起看" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---硬糖视频--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 硬糖视频</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="硬糖视频" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---麝香葡萄之夜--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 麝香葡萄之夜 百名女优大作战</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="KOWEN_WU" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---國光幫幫忙之大哥是對的--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 國光幫幫忙之大哥是對的</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="國光幫幫忙之大哥是對的" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---藍博學院--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 藍博學院</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="藍博學院" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+									  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---在不瘋狂就等死--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 在不瘋狂就等死</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="在不瘋狂就等死" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+
+
+	  
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/show---愛吃西瓜的鑒黃師--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 带你看尽百名老师的风流故事</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="58" class="愛吃西瓜的鑒黃師" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			  		           <!-- 分类导航 -->
+
+	   <div class="pannel clearfix">
+	  	  <div class="type_list_menu">
+	      		<ul class="clearfix">
+	  					<li><h4><a href="/show/show---藍博學院--------/">蓝博学院</a></h4></li>
+						<li><h4><a href="/show/show---國光幫幫忙--------/">国光帮帮忙</a></h4></li>
+						<li><h4><a href="/show/show---中指通--------/">中指通</a></h4></li>
+						<li><h4><a href="/show/show---奇啪行小鹏--------/">小鹏奇葩行</a></h4></li> 
+						<li><h4><a href="/show/show---小哥哥艾理--------/">小哥哥艾理</a></h4></li>
+						<li><h4><a href="/show/show---麝香葡萄之夜--------/">麝香葡萄之夜</a></h4></li>
+	      		</ul>
+	       </div>
+	   </div>
+
+	  <!-- end 分类导航 -->
+			
+			
+    </div>
+    <script type="text/javascript">
+        $('.mac_total').html('{$__PAGING__.record_total}');
+    </script>
+    <script type="text/javascript">
+		var linum = document.getElementById('vod_level').getElementsByTagName("li").length;
+        if (linum > 5){
+		   $("#vod_level").css("display","block");
+			$("#vod_time").css("display","none");
+		}else{
+		   $("#vod_level").css("display","none");
+		   $("#vod_time").css("display","block");
+		}
+	</script>
+	{if condition="$GLOBALS['config']['site']['hot_banner'] eq 0"}
+	<script type="text/javascript">
+		var blinum = document.getElementById('vod_banner').getElementsByTagName("li").length;
+        if (blinum < 3){
+		   $("#vod_banner").remove();
+		   $(".bgi_box").remove();
+		}
+    </script>
+    {/if}
+	{include file="block/foot"}
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>最近更新 - {$maccms.site_name}</title>  
+	{include file="block/include"}
+</head>
+<body>
+      <div class="hot_banner">
+    {include file="block/head"}
+    </div>
+  <div class="container">
+        <div class="row">
+	        <div class="pannel clearfix">
+                <div class="pannel_head clearfix">
+					<h2 class="title"><i class="fa fa-youtube-play" aria-hidden="true"></i> 最近更新</h2>
+	            </div>
+				<!-- 列表 -->			
+                <div class="vodlist_smt clearfix">
+					<ul>
+						{maccms:vod num="120" type="21,22,25,26,29,59,60" order="desc" by="time"}
+                           {include file="block/vod_box_video"}
+						{/maccms:vod}
+					</ul>
+                </div>				
+				<!-- end 列表 -->	
+			</div>
+        </div>
+    </div>
+	{include file="block/foot"}
+</body>
+</html>

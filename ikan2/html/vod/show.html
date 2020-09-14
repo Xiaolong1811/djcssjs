@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{include file="seo/vod_show"}
+		{include file="block/include"}
+		<script type="text/javascript" src="{$maccms.path_tpl}js/tabbar.js"></script>
+	</head>
+	<body>
+				<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+		<div id="show_page">
+			<div class="container">
+				<div class="row">
+
+					<div class="pannel clearfix">
+						<!-- 列表 -->
+						<div class="wrapper_fl wrapper_tm" style="border-top: 0;">
+							<ul class="screen_list sx_tz clearfix" style="float: right;">
+								<li {if condition="$param.by eq '' || $param.by eq 'time'" } class="ik_fl" {/if}> <a href="{:mac_url_type($obj,['area'=>$param['area'],'lang'=>$param['lang'],'year'=>$param['year'],'level'=>$param['level'],'letter'=>$param['letter'],'state'=>$param['state'],'tag'=>$param['tag'],'class'=>$param['class'],'order'=>$param['order'],'by'=>'time' ],'show')}">
+									新片 <i class="fa fa-clock-o" aria-hidden="true"></i></a></li>
+								<li {if condition="$param.by eq 'hits'" } class="ik_fl" {/if}> <a href="{:mac_url_type($obj,['area'=>$param['area'],'lang'=>$param['lang'],'year'=>$param['year'],'level'=>$param['level'],'letter'=>$param['letter'],'state'=>$param['state'],'tag'=>$param['tag'],'class'=>$param['class'],'order'=>$param['order'],'by'=>'hits' ],'show')}">热门 <i class="fa fa-fire" aria-hidden="true"></i></a></li>
+							</ul>
+							<span class="sx_total">共有<em class="mac_total"></em>个影片</span>
+						</div>
+						<ul class="vodlist vodlist_wi clearfix">
+							{maccms:vod num="60" paging="yes" half="3" pageurl="vod/show" type="current" order="desc" by="time"}
+							{include file="block/vod_box"}
+							{/maccms:vod}
+						</ul>
+						<!-- end 列表 -->
+
+						{include file="block/page"}
+						<!-- 翻页-->
+						{empty name="$__PAGING__.record_total"}
+						<div class="show_no">暂无数据</div>
+						{/empty}
+					</div>
+				</div>
+			</div>
+			<script type="text/javascript">
+				$('.mac_total').html('{$__PAGING__.record_total}');
+			</script>
+			{include file="block/foot"}
+		</div>
+	</body>
+</html>

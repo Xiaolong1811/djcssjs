@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/vod_type"}   
+	{include file="block/include"}
+	<script type="text/javascript" src="{$maccms.path_tpl}js/loading.js"></script>
+	<script src="{$maccms.path_tpl}js/jquery.adaptive.js"></script>
+</head>
+<body>
+<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+  <div class="container">
+	  
+ <!-- 分类导航 -->
+
+	   <div class="pannel clearfix">
+	  	  <div class="type_list_menu">
+	      		<ul class="clearfix">
+	  					<li><h4><a style="color: red" href="/show/video-中国----------/">国产自拍</a></h4></li>
+						<li><h4><a style="color: #00afff;" href="/show/video-日本----------/">日本自拍</a></h4></li>
+						<li><h4><a style="color: #7a00ff;" href="/show/video-欧美----------/">欧美自拍</a></h4></li>
+						<li><h4><a href="/show/video-----------/">全部分类</a></h4></li>
+	      		</ul>
+	       </div>
+	   </div>
+
+	  <!-- end 分类导航 -->
+	  
+	  
+	  
+	  	   			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<h2 class="title"><i class="fa fa-bolt" aria-hidden="true"></i>  限时免费视频</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="29" order="desc" level="8" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+	  
+	  
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/video-中国----------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 国产自拍</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="20" paging="no" type="29" area="中国" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/video-中国----------/"><i class="fa fa-plus" aria-hidden="true"></i> 查看更多国产自拍视频</a>
+				</div>
+			</div>
+
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/video---视频激情--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 激情主播</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="29" class="视频激情" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/video---视频激情--------/"><i class="fa fa-plus" aria-hidden="true"></i> 查看更多小姐姐主播视频</a>
+				</div>
+			</div>
+			
+			
+									  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/video---公众野战--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 户外野战</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="6" paging="no" type="29" class="公众野战" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/video---公众野战--------/"><i class="fa fa-plus" aria-hidden="true"></i> 查看更多户外野战视频</a>
+				</div>
+			</div>
+			
+						               <!-- 推荐阅读 -->
+			<div class="pannel clearfix">
+                <ul class="art_relates clearfix">
+                    {maccms:art num="1" ids="'.$obj['vod_rel_art'].'" level="9" order="desc" by="rnd"}
+						{include file="block/art_box_right"}
+                    {/maccms:art}
+				</ul>
+			</div>
+			<!-- end 推荐阅读 -->
+			
+									  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/video---女性自慰--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 美女自慰</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="6" paging="no" type="29" class="女性自慰" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/video---女性自慰--------/"><i class="fa fa-plus" aria-hidden="true"></i> 更多独奏女自慰视频</a>
+				</div>
+			</div>
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/video-欧美----------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 欧美风情</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="29" area="欧美" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/video-欧美----------/"><i class="fa fa-plus" aria-hidden="true"></i> 查看更多欧美视频</a>
+				</div>
+			</div>
+			
+
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/video-韩国----------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 韩国三级情色</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="6" paging="no" type="29" area="韩国" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/video-韩国----------/"><i class="fa fa-plus" aria-hidden="true"></i> 查看更多韩国三级情色</a>
+				</div>
+			</div>
+			
+			               <!-- 推荐阅读 -->
+			<div class="pannel clearfix">
+                <ul class="art_relates clearfix">
+                    {maccms:art num="1" ids="'.$obj['vod_rel_art'].'" level="9" order="desc" by="rnd"}
+						{include file="block/art_box_right"}
+                    {/maccms:art}
+				</ul>
+			</div>
+			<!-- end 推荐阅读 -->
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/video-日本----------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 日本自拍</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="20" paging="no" type="29" area="日本" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+					<a class="morevod" href="/show/video-日本----------/"><i class="fa fa-plus" aria-hidden="true"></i> 查看更多日本本土自拍视频</a>
+				</div>
+			</div>
+			
+
+			
+ <!-- 分类导航 -->
+
+	   <div class="pannel clearfix">
+	  	  <div class="type_list_menu">
+	      		<ul class="clearfix">
+	  					<li><h4><a style="color: red" href="/show/video-中国----------/">国产自拍</a></h4></li>
+						<li><h4><a style="color: #00afff;" href="/show/video-日本----------/">日本自拍</a></h4></li>
+						<li><h4><a style="color: #7a00ff;" href="/show/video-欧美----------/">欧美自拍</a></h4></li>
+						<li><h4><a href="/show/video-----------/">全部分类</a></h4></li>
+	      		</ul>
+	       </div>
+	   </div>
+
+	  <!-- end 分类导航 -->
+	  
+	  
+	  
+			
+    </div>
+    <script type="text/javascript">
+        $('.mac_total').html('{$__PAGING__.record_total}');
+    </script>
+    <script type="text/javascript">
+		var linum = document.getElementById('vod_level').getElementsByTagName("li").length;
+        if (linum > 5){
+		   $("#vod_level").css("display","block");
+			$("#vod_time").css("display","none");
+		}else{
+		   $("#vod_level").css("display","none");
+		   $("#vod_time").css("display","block");
+		}
+	</script>
+	{if condition="$GLOBALS['config']['site']['hot_banner'] eq 0"}
+	<script type="text/javascript">
+		var blinum = document.getElementById('vod_banner').getElementsByTagName("li").length;
+        if (blinum < 3){
+		   $("#vod_banner").remove();
+		   $(".bgi_box").remove();
+		}
+    </script>
+    {/if}
+	{include file="block/foot"}
+</body>
+</html>

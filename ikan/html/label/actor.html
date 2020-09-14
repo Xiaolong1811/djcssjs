@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>东京影城 本月推荐女优 最新日本女优影片 最新影片在线播放 高清 极速 海量</title>
+	{include file="block/include"}
+	<script type="text/javascript" src="{$maccms.path_tpl}js/loading.js"></script>
+	<script src="{$maccms.path_tpl}js/jquery.adaptive.js"></script>
+</head>
+<body>
+	<div class="hot_banner">
+     {include file="block/head"}
+     </div>
+  <div class="container">
+
+
+              <div class="vod_row">
+            <div class="pannel">
+					<div class="pannel_head clearfix">
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 本月热门女优</h2>
+					</div>
+                <ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+                    {maccms:actor num="16" paging="no" type="53" level="1" order="desc" by="time"}
+					   {include file="block/zbvod_box"}
+					{/maccms:actor}
+                </ul>
+            </div>
+        </div>
+
+
+              <div class="vod_row">
+            <div class="pannel">
+					<div class="pannel_head clearfix">
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 推荐日本女优</h2>
+					</div>
+                <ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+                    {maccms:actor num="300" paging="no" type="53" level="9" order="desc" by="time"}
+					   {include file="block/zbvod_box"}
+					{/maccms:actor}
+                </ul>
+            </div>
+        </div>
+       
+              <div class="vod_row">
+            <div class="pannel">
+					<div class="pannel_head clearfix">
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 推荐日本女优</h2>
+					</div>
+                <ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+                    {maccms:actor num="300" paging="no" type="53" level="0,2,3,4,5,6,7,8" order="desc" by="time"}
+					   {include file="block/zbvod_box"}
+					{/maccms:actor}
+                </ul>
+            </div>
+        </div>
+       
+       
+
+    </div>
+	{include file="block/foot"}
+</body>
+</html>

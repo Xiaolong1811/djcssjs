@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE10" />
+	<meta name="renderer" content="webkit|ie-comp|ie-stand">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>系统提示......</title>
+    <link rel="stylesheet" href="{$maccms.path_tpl}css/style.ikan.css">
+    <script src="{$maccms.path_tpl}js/jquery.html.js"></script>
+    <style>
+        body{background:#fff;}
+    </style>
+</head>
+<body>
+<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+<div class="weui_msg_jump">
+    <div class="weui_icon"><a><img width="200" height="213" src="{$maccms.path_tpl}img/logo_icon.png" alt=""/></a>	</div>
+    
+    <div class="weui_text">
+        <h4 class="weui_msg_title">友情提示</h4>
+        <p class="weui_xtts">客官好：{$msg}</p>
+        <p class="weui_tzt"><b id="wait"><?php echo($wait);?></b>秒后自动跳转到  如失败请点击<a id="href" href="<?php echo($url);?>">点击跳转</a> </p>
+    </div>
+</div>
+
+<script type="text/javascript">
+    (function(){
+        var wait = document.getElementById('wait'),
+                href = document.getElementById('href').href;
+        var interval = setInterval(function(){
+            var time = --wait.innerHTML;
+            if(time <= 0) {
+                location.href = href;
+                clearInterval(interval);
+            };
+        }, 1000);
+    })();
+</script>
+	{include file="block/foot"}
+</body>
+</html>

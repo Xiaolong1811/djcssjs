@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/vod_type"}   
+	{include file="block/include"}
+	<script type="text/javascript" src="{$maccms.path_tpl}js/loading.js"></script>
+	<script src="{$maccms.path_tpl}js/jquery.adaptive.js"></script>
+</head>
+<body>
+<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+  <div class="container">
+	  
+ <!-- 分类导航 -->
+
+	  	   			  	<div class="vod_row">
+				<div class="pannel">
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+					    {maccms:vod num="1" paging="no" type="59" order="desc" level="8" by="rnd" }
+						{include file="block/vod_box_yulan"}
+						{/maccms:vod}
+						{maccms:vod num="8" paging="no" type="59" order="desc" level="8" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+			  		           <!-- 分类导航 -->
+
+	   <div class="pannel clearfix">
+					<div class="pannel_head clearfix">
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i>  动漫分类</h2>
+					</div>
+	  	  <div class="type_list_menu">
+	      		<ul class="clearfix">
+	  					<li><h4><a href="/show/anime---中文字幕--------/">中文字幕</a></h4></li>
+						<li><h4><a href="/show/anime---日本动漫--------/">日本动漫</a></h4></li>
+						<li><h4><a href="/show/anime---欧美卡通--------/">欧美卡通</a></h4></li>
+						<li><h4><a href="/show/anime---巨乳--------/">巨乳</a></h4></li> 
+						<li><h4><a href="/show/anime---跨性别--------/">跨性别</a></h4></li>
+						<li><h4><a href="/show/anime---女同--------/">女同</a></h4></li>
+	      		</ul>
+	       </div>
+	   </div>
+
+	  <!-- end 分类导航 -->
+	  
+
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/anime---中文字幕--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 中文字幕日本动漫</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="16" paging="no" type="59" class="中文字幕" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+
+
+			
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/anime---日本动漫--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 日本动漫</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="59" class="日本动漫" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/anime---欧美卡通--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 欧美卡通</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="59" class="欧美卡通" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+
+			
+    </div>
+    <script type="text/javascript">
+        $('.mac_total').html('{$__PAGING__.record_total}');
+    </script>
+    <script type="text/javascript">
+		var linum = document.getElementById('vod_level').getElementsByTagName("li").length;
+        if (linum > 5){
+		   $("#vod_level").css("display","block");
+			$("#vod_time").css("display","none");
+		}else{
+		   $("#vod_level").css("display","none");
+		   $("#vod_time").css("display","block");
+		}
+	</script>
+	{if condition="$GLOBALS['config']['site']['hot_banner'] eq 0"}
+	<script type="text/javascript">
+		var blinum = document.getElementById('vod_banner').getElementsByTagName("li").length;
+        if (blinum < 3){
+		   $("#vod_banner").remove();
+		   $(".bgi_box").remove();
+		}
+    </script>
+    {/if}
+	{include file="block/foot"}
+</body>
+</html>

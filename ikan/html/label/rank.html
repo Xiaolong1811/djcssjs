@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/rank_type"}   
+	{include file="block/include"}
+</head>
+<body>
+<div class="hot_banner">
+			{include file="block/head"}
+		</div>
+  <div class="container white_pal">
+      <div class="row">
+       <div class="pannel rankpage clearfix">
+         <div class="tabs">
+		  <input type="radio" id="tab1" name="tab-control" checked>
+		  <input type="radio" id="tab2" name="tab-control">
+		  <input type="radio" id="tab3" name="tab-control">  
+		  <ul class="title_nav">
+		    <li class="tab_rank" title="周榜"><label for="tab1" role="button"><span>周榜</span></label></li>
+		    <li class="tab_rank" title="月榜"><label for="tab2" role="button"><span>月榜</span></label></li>
+		    <li class="tab_rank" title="总榜"><label for="tab3" role="button"><span>总榜</span></label></li>
+		  </ul>
+		  
+		  <div class="content">
+		    <section>
+		      <h2>周榜</h2>
+	        	<!-- 列表 -->
+				{maccms:type num="6" ids="21,22,29,59" order="asc" by="sort" flag="vod" id="ik"}
+				<div class="rank_info">
+					<div class="list_info">
+						<div class="pannel_head clearfix">
+							<span class="text_muted pull_right">
+								<a href="{:mac_url_type($ik)}">更多<i class="iconfont more_i">&#xe623;</i></a>
+							</span>
+							<h3 class="title">
+								{$ik.type_name}
+							</h3>	
+						</div>
+						<ul class="part_rows">
+							{maccms:vod num="20" type="'.$ik['type_id'].'" order="desc" by="hits_week"}
+								{include file="block/rank_box_week"}	
+							{/maccms:vod}
+						</ul>
+					</div>
+				</div>
+				{/maccms:type}
+				<!-- end 列表 -->
+			</section>
+		    <section>
+		      <h2>月榜</h2>
+		        <!-- 列表 -->
+				{maccms:type num="6" ids="29,59,21,22" order="asc" by="sort" flag="vod" id="ik"}
+				<div class="rank_info">
+					<div class="list_info">
+						<div class="pannel_head clearfix">
+							<span class="text_muted pull_right">
+								<a href="{:mac_url_type($ik)}">更多<i class="iconfont more_i">&#xe623;</i></a>
+							</span>
+							<h3 class="title">
+								{$ik.type_name}
+							</h3>	
+						</div>
+						<ul class="part_rows">
+							{maccms:vod num="20" type="'.$ik['type_id'].'" order="desc" by="hits_month"}
+								{include file="block/rank_box_week"}	
+							{/maccms:vod}
+						</ul>
+					</div>
+				</div>
+				{/maccms:type}
+				<!-- end 列表 -->
+	        </section>
+		    <section>
+		      <h2>总榜</h2>
+		      	<!-- 列表 -->
+				{maccms:type num="6" ids="21,22,29,59" order="asc" by="sort" flag="vod" id="ik"}
+				<div class="rank_info">
+					<div class="list_info">
+						<div class="pannel_head clearfix">
+							<span class="text_muted pull_right">
+								<a href="{:mac_url_type($ik)}">更多<i class="iconfont more_i">&#xe623;</i></a>
+							</span>
+							<h3 class="title">
+								{$ik.type_name}
+							</h3>	
+						</div>
+						<ul class="part_rows">
+							{maccms:vod num="20" type="'.$ik['type_id'].'" order="desc" by="hits"}
+								{include file="block/rank_box_week"}	
+							{/maccms:vod}
+						</ul>
+					</div>
+				</div>
+				{/maccms:type}
+				<!-- end 列表 -->
+			</section>
+		  </div>
+	     </div>
+       </div>
+      </div>
+    </div>
+{include file="block/foot"}
+</body>
+</html>

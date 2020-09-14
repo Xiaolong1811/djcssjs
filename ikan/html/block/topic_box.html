@@ -1,0 +1,11 @@
+<li class="topiclist_item">
+	<a class="topiclist_thumb lazyload" target="_blank" href="{:mac_url_topic_detail($vo)}" data-original="{$GLOBALS['config']['extra']['images']}{$vo.topic_pic|mac_url_img}">						
+		<span class="play hidden_xs"></span>
+	</a>									
+	<div class="topiclist_title">
+	    <a target="_blank" href="{:mac_url_topic_detail($vo)}">{$vo.topic_name}</a>
+	</div>
+			<div class="topiclist_title">									
+		<p align="right" class="vodlist_sub_right">{$vo.topic_time|mac_friend_date}</p>
+	</div>
+</li>

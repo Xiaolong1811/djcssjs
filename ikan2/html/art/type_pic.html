@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{include file="seo/art_type"}
+		{include file="block/include"}
+	</head>
+	<body>
+		{include file="block/head"}
+		<div class="container">
+			<!-- 分类导航 -->
+			<div class="pannel clearfix">
+				<div class="type_list_menu">
+					<ul class="clearfix">
+						<li><i class="iconfont pianku_i">&#xe647;</i>&nbsp;美图分类</a></li>
+						<li><a href="/index.php/art/type/id/31.html">激情动图</a></li>
+						<li><a href="/index.php/art/type/id/43.html">国产自拍</a></li>
+						<li><a href="/index.php/art/type/id/42.html">诱惑美模</a></li>
+						<li><a href="/index.php/art/type/id/44.html">二次元风</a></li>
+						<li><a href="/index.php/art/type/id/45.html">欧美风情</a></li>
+						<li><a href="/index.php/art/type/id/46.html">日本套图</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end 分类导航 -->
+			<div class="art_list_row_pic">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<h2 class="title">
+							{$obj.type_name}
+						</h2>
+					</div>
+					<ul class="vodlist vodlist_wi list_v2 clearfix">
+						{maccms:art num="30" paging="yes" half="3" type="current" order="desc" by="sort"}
+						{include file="block/pic_box"}
+						{/maccms:art}
+					</ul>
+					{empty name="$__PAGING__.record_total"}
+					<div class="show_no">抱歉！暂无数据</div>
+					{/empty}
+					{include file="block/page"}
+					<!-- 翻页-->
+				</div>
+			</div>
+		</div>
+		{include file="block/foot"}
+	</body>
+</html>

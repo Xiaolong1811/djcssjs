@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {include file="seo/index"}
+	{include file="block/include"}
+	<script type="text/javascript" src="{$maccms.path_tpl}js/loading.js"></script>
+	<script src="{$maccms.path_tpl}js/jquery.adaptive.js"></script>
+</head>
+<body>
+<div class="hot_banner">
+    {include file="block/head"}
+</div>
+    <div class="container">
+        
+					<div class="row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="{:mac_url_topic_index()}"> 更多精选 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="iconfont">&#xe64c;</i>编辑精选推荐</h2>
+					</div>
+					<ul class="topiclist topic_hom list_v2 clearfix">
+						{maccms:topic num="12" order="desc"  by="time"}
+						{include file="block/topic_box"}
+						{/maccms:topic}
+					</ul>
+				</div>
+			</div>
+
+
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/21-----------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i>  中文字幕最新影片</h2>
+						
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="7" paging="no" type="21" lang="中文字幕" order="desc" by="time"}
+						{include file="block/vod_box_ym"}
+						{/maccms:vod}
+						{maccms:vod num="1" paging="no" type="21" lang="中文字幕" order="desc" by="time" start="8"}
+						{include file="block/vod_box_ymyulan"}
+						{/maccms:vod}
+						{maccms:vod num="8" paging="no" type="21" lang="中文字幕" order="desc" by="time" start="9"}
+						{include file="block/vod_box_ym"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/29-中国----------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 国产自拍</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="29" area="中国" order="desc" state="高清" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+
+
+							<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/26-----------/">更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 写真偶像</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="26" order="desc" by="time" }
+						{include file="block/vod_box_ym"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/wuma---caribbeancom--------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 加勒比厂商无码影片</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="22" tag="caribbeancom" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/21---巨乳--------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i>  中文字幕巨乳女优</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="21" class="巨乳" lang="中文字幕" order="desc" by="hits_day" }
+						{include file="block/vod_box_ym"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/25-----------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 素人女子</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="25" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+		
+			
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/29-日本----------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 日本自拍</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="29" area="日本" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/21---女同性恋--------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i>  女同性恋</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="21" class="女同性恋" lang="中文字幕" order="desc" by="hits_day" }
+						{include file="block/vod_box_ym"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+			
+
+			
+						  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/21---多P--------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 还有什么比群交更让人兴奋的~~~</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="12" paging="no" type="21" class="多P" lang="中文字幕" order="desc" by="hits_day" }
+						{include file="block/vod_box_ym"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+			
+
+			
+			
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/anime---中文字幕--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 中文字幕日本动漫</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="59" class="中文字幕" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+
+
+			  	<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/music---韩国音乐--------/" >更多视频 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 韩国音乐</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="60" class="韩国音乐" order="desc" by="time" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+
+			<div class="vod_row">
+				<div class="pannel">
+					<div class="pannel_head clearfix">
+						<a class="text_muted pull_right" href="/show/58-----------/" >更多影片 <i class="fa fa-plus" aria-hidden="true"></i></a>
+						<h2 class="title"><i class="fa fa-arrow-circle-down"></i> 大人综艺 成人话题</h2>
+					</div>
+					<ul class="vodlist vodlist_wi vodlist_id{$vo1.type_id} list_v2 clearfix">
+						{maccms:vod num="8" paging="no" type="58" order="desc" by="hits_day" }
+						{include file="block/vod_box"}
+						{/maccms:vod}
+					</ul>
+				</div>
+			</div>
+
+
+</div>
+    {include file="block/foot"}
+</body>
+</html>
