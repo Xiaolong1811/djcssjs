@@ -537,7 +537,7 @@ a:hover.swiper-button-next,a:hover.swiper-button-prev {color:#fff;background:#ff
 .msg_code input:focus,.msg_code input {width:35%;height:1.125rem;line-height:1.125rem;padding:0 .25rem;border:1px solid #f1f1f1;background:#f8f8f8;border-radius:4px}
 .gbook_form textarea,.msg_code input:focus {outline:0;border:1px solid #f1f1f1;background:#f8f8f8;font-size:.35rem;border-radius:4px}
 .msg_code img {cursor:pointer;height:1.125rem;margin-left:2%;width:26%;border:1px solid #f1f1f1;margin-top:-.05rem;border-radius:4px}
-.comm_content {color:#111}
+.comm_content {color:#111;font-size: 0.45rem;line-height: 0.7rem;}
 .comm_list .part_rows {position:relative;overflow:hidden}
 .comm_list .comm_avat {position:absolute;top:.45rem;left:0;width:1.25rem;height:1.25rem}
 .part_roun {border-radius:100%}
@@ -547,7 +547,7 @@ a:hover.swiper-button-next,a:hover.swiper-button-prev {color:#fff;background:#ff
 .back_ashen {background-color:#f8f8f8!important}
 .comm_list .part_tips {position:absolute;font-size:.325rem;float:right;right:0}
 .comm_list .comm_head,.comm_reply_child .text_line {display:block;padding-bottom:.15rem}
-.comm_list .comm_rp_head {padding-left:.5rem;background-image:url(../img/reply_icon.png);background-repeat:no-repeat;background-position:left .1rem;font-size:.325rem}
+.comm_list .comm_rp_head {padding-left:.5rem;background-image:url(../img/reply_icon.png);background-repeat:no-repeat;background-position:left .1rem;font-size: .45rem;line-height: 0.9rem;}
 .comm_list .comm_cont {display:block;overflow:hidden}
 .text_black {background:#f8f8f8;border-radius:4px;padding:1rem;margin-top:.375rem;text-align:center}
 .input_wrap .smt {width:100%}
