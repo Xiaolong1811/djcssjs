@@ -528,8 +528,8 @@ a:hover.swiper-button-next,a:hover.swiper-button-prev {color:#fff;background:#ff
 .commlist_row {float:left;width:70%}
 .input_row {float:right;width:30%;padding-left:.5rem}
 .input_row .pannel,.commlist_row .pannel {background:#fff;padding:.5rem;margin:.5rem 0 0}
-.gbook_content {width:100%;min-height:2rem;padding:.25rem}
-.gbook_submit {float:right;width:2.5rem;height:1.125rem;background:#ff5f00!important;color:#fff;border:1px solid #ff5f00!important;display:block;cursor:pointer;font-size:.35rem;border-radius:4px}
+.gbook_content {width:100%;min-height: 8rem;padding:.25rem;}
+.gbook_submit {float:right;width:2.5rem;height:1.125rem;background: #f70000!important;color:#fff;border: 1px solid #f70000!important;display:block;cursor:pointer;font-size:.35rem;border-radius:4px;}
 .gbook_submit:hover {background:#21d027}
 .remaining_w {float:left;padding:0 .25rem;border:1px solid #f1f1f1;background-color:#f8f8f8;width:100%;height:1.125rem;line-height:1.125rem;margin-bottom:.375rem;text-align:center;border-radius:4px}
 .mac_report .msg_code {padding:.25rem 0 .375rem}
@@ -537,7 +537,7 @@ a:hover.swiper-button-next,a:hover.swiper-button-prev {color:#fff;background:#ff
 .msg_code input:focus,.msg_code input {width:35%;height:1.125rem;line-height:1.125rem;padding:0 .25rem;border:1px solid #f1f1f1;background:#f8f8f8;border-radius:4px}
 .gbook_form textarea,.msg_code input:focus {outline:0;border:1px solid #f1f1f1;background:#f8f8f8;font-size:.35rem;border-radius:4px}
 .msg_code img {cursor:pointer;height:1.125rem;margin-left:2%;width:26%;border:1px solid #f1f1f1;margin-top:-.05rem;border-radius:4px}
-.comm_content {color:#111;font-size: 0.45rem;line-height: 0.7rem;}
+.comm_content {color:#111}
 .comm_list .part_rows {position:relative;overflow:hidden}
 .comm_list .comm_avat {position:absolute;top:.45rem;left:0;width:1.25rem;height:1.25rem}
 .part_roun {border-radius:100%}
@@ -547,7 +547,7 @@ a:hover.swiper-button-next,a:hover.swiper-button-prev {color:#fff;background:#ff
 .back_ashen {background-color:#f8f8f8!important}
 .comm_list .part_tips {position:absolute;font-size:.325rem;float:right;right:0}
 .comm_list .comm_head,.comm_reply_child .text_line {display:block;padding-bottom:.15rem}
-.comm_list .comm_rp_head {padding-left:.5rem;background-image:url(../img/reply_icon.png);background-repeat:no-repeat;background-position:left .1rem;font-size: .45rem;line-height: 0.9rem;}
+.comm_list .comm_rp_head {padding-left:.5rem;background-image:url(../img/reply_icon.png);background-repeat:no-repeat;background-position:left .1rem;font-size:.325rem}
 .comm_list .comm_cont {display:block;overflow:hidden}
 .text_black {background:#f8f8f8;border-radius:4px;padding:1rem;margin-top:.375rem;text-align:center}
 .input_wrap .smt {width:100%}
